@@ -1,0 +1,83 @@
+/* ====================== font ====================== */
+@font-face {
+    font-family: 'GE Dinar One';
+    src: url('../font/alfont_com_GE-Dinar-One-Regular.otf') format('opentype');
+}
+
+body {
+    font-family: 'GE Dinar One', sans-serif;
+}
+
+/* ====================== end font ====================== */
+
+
+
+/* ====================== Custom ====================== */
+
+input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    --tw-ring-inset: unset;
+    --tw-ring-offset-width: 0;
+    --tw-ring-offset-color: transparent;
+    --tw-ring-color: transparent;
+    --tw-ring-offset-shadow: unset;
+    --tw-ring-shadow: unset;
+    border-color:black !important;
+
+}
+
+/* ====================== end custom ====================== */
+
+
+
+
+
+
+
+
+
+/* ====================== login pages ====================== */
+
+.right {
+    width: 100% !important;
+    padding: 0 30px !important;
+    max-width: 30rem !important;
+    margin: auto;
+}
+
+.w-right {
+    width: 420.647px !important;
+}
+
+.socialest-phone {
+    display: none !important;
+}
+
+/* ====================== end login ====================== */
+
+
+/* ====================== media queries ====================== */
+@media (max-width: 768px) {}
+
+@media (max-width: 576px) {}
+
+@media (max-width: 990px) {
+    .left {
+        display: none !important;
+    }
+
+    .right,
+    .w-right {
+        width: 100% !important;
+    }
+
+    .socialest-phone {
+        display: flex !important;
+    }
+    .socialest-desk {
+        display: none !important;
+    }
+}
+
+/* ====================== end media queries ====================== */
