@@ -290,6 +290,10 @@ select:not([size]) {
         gap: 0.5rem !important;
         /* Reduce gap between days */
     }
+    /* Today button style */
+[data-calendar-theme=light] .vanilla-calendar-day__btn_today {
+    font-size: 12px !important;
+}
 
     /* Header customization for mobile */
     .vanilla-calendar-header {
@@ -333,6 +337,7 @@ select:not([size]) {
     top: 50% !important;
     left: 50% !important;
     transform: translate(-50%, -50%);
+    color: #efc2ad80;
 }
 
 /* ====================== end Video Styling ====================== */
