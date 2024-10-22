@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+        integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+
+    <!-- Flowbite CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+    <!-- Link to Custom CSS File -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <!--====================== HEADER ======================-->
+    <header>
+        <nav class="bg-white shadow-[0px_15px_8.5px_0px_rgba(0,0,0,0.03)]">
+            <div class="max-w-[1400px] flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="assets/images/logo.svg" class="sm:h-10 h-9  " alt="Logo" />
+                </a>
+                <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                    <button data-collapse-toggle="navbar-cta" type="button"
+                        class="inline-flex items-center w-10 h-10 justify-center text-md text-gray-500  lg:hidden "
+                        aria-controls="navbar-cta" aria-expanded="false" id="menu-button">
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 17 14" id="menu-icon">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 1h15M1 7h15M1 13h15" />
+                        </svg>
+                    </button>
+
+                    <div class="lg:flex md:hidden sm:hidden flex items-center gap-8">
+
+                        <svg class="sm:block hidden" width="19" height="18" viewBox="0 0 19 18" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.9941 16.7215L13.1159 11.7977C14.0705 10.601 14.646 9.08453 14.646 7.43564C14.646 3.57605 11.5173 0.447266 7.6531 0.447266C3.78894 0.447266 0.660156 3.58062 0.660156 7.44021C0.660156 11.2998 3.78894 14.4286 7.6531 14.4286C9.32483 14.4286 10.855 13.8439 12.0608 12.8665L16.907 17.7583C17.0532 17.9136 17.2541 17.9913 17.4505 17.9913C17.6378 17.9913 17.8251 17.9228 17.9667 17.7857C18.2681 17.498 18.2773 17.023 17.9941 16.7215ZM7.6531 12.9259C6.18691 12.9259 4.80751 12.3549 3.77067 11.3181C2.73383 10.2812 2.16289 8.90183 2.16289 7.44021C2.16289 5.97402 2.73383 4.59461 3.77067 3.56235C4.80751 2.52551 6.18691 1.95456 7.6531 1.95456C9.11929 1.95456 10.4987 2.52551 11.5355 3.56235C12.5724 4.59918 13.1433 5.97859 13.1433 7.44021C13.1433 8.9064 12.5724 10.2858 11.5355 11.3181C10.4987 12.3549 9.11929 12.9259 7.6531 12.9259Z"
+                                fill="#2A2A2A" />
+                        </svg>
+
+                        <svg class="sm:block hidden" class="" width="25" height="24" viewBox="0 0 25 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.3592 22.393C10.3592 22.9843 9.87979 23.4636 9.28846 23.4636C8.69714 23.4636 8.21777 22.9843 8.21777 22.393C8.21777 21.8016 8.69714 21.3223 9.28846 21.3223C9.87979 21.3223 10.3592 21.8016 10.3592 22.393Z"
+                                stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M22.1365 22.393C22.1365 22.9843 21.6571 23.4636 21.0658 23.4636C20.4745 23.4636 19.9951 22.9843 19.9951 22.393C19.9951 21.8016 20.4745 21.3223 21.0658 21.3223C21.6571 21.3223 22.1365 21.8016 22.1365 22.393Z"
+                                stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M0.722656 0.978516H5.00542L7.87487 15.3151C8.07695 16.3325 8.97916 17.0587 10.0162 17.0389H20.4234C21.4604 17.0587 22.3627 16.3325 22.5647 15.3151L24.2778 6.33197H6.07611"
+                                stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        <button type="button"
+                            class="sm:flex hidden text-white bg-[#e77e5c] focus:outline-none text-[14px] rounded-[15px] px-4 py-3 flex items-center gap-3">
+                            <svg width="20" height="20" viewBox="0 0 22 21" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.0007 11.7933C14.212 11.7933 16.8173 9.18796 16.8173 5.97673C16.8173 2.7655 14.212 0.160156 11.0007 0.160156C7.7895 0.160156 5.18416 2.7655 5.18416 5.97673C5.18416 9.18796 7.7895 11.7933 11.0007 11.7933ZM16.171 13.0859H13.9454C13.0487 13.4979 12.0509 13.7322 11.0007 13.7322C9.95052 13.7322 8.95685 13.4979 8.05609 13.0859H5.83044C2.97467 13.0859 0.660156 15.4004 0.660156 18.2562V18.9025C0.660156 19.9729 1.5286 20.8413 2.59901 20.8413H19.4025C20.4729 20.8413 21.3413 19.9729 21.3413 18.9025V18.2562C21.3413 15.4004 19.0268 13.0859 16.171 13.0859Z"
+                                    fill="white" />
+                            </svg>
+                            تسجيل الدخول
+                        </button>
+
+
+                    </div>
+                </div>
+
+                <div class="items-center justify-between hidden w-full lg:flex md:w-auto md:order-1" id="navbar-cta">
+                    <ul
+                        class="flex flex-col sm:gap-[60px] gap-4 font-medium p-4 md:p-0 mt-4  rounded-lg rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
+                        <li>
+                            <a href="#" class="block py-2  rounded md:bg-transparent nav-li-active"
+                                aria-current="page">الرئيسية</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 rounded hover:bg-gray-100 md:hover:bg-transparent nav-li">إحجز
+                                إستشارتك</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 rounded hover:bg-gray-100 md:hover:bg-transparent nav-li">الدورات</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 rounded hover:bg-gray-100 md:hover:bg-transparent nav-li">فريقنا</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 rounded hover:bg-gray-100 md:hover:bg-transparent nav-li">اختبارات
+                                شخصية</a>
+                        </li>
+                        <!-- زر تسجيل الدخول -->
+                        <li class="sm:hidden block">
+                            <button type="button"
+                                class="text-white bg-[#e77e5c] focus:outline-none text-[14px] rounded-[15px] px-4 py-3 flex items-center gap-3">
+                                <svg width="17" height="17" viewBox="0 0 22 21" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.0007 11.7933C14.212 11.7933 16.8173 9.18796 16.8173 5.97673C16.8173 2.7655 14.212 0.160156 11.0007 0.160156C7.7895 0.160156 5.18416 2.7655 5.18416 5.97673C5.18416 9.18796 7.7895 11.7933 11.0007 11.7933ZM16.171 13.0859H13.9454C13.0487 13.4979 12.0509 13.7322 11.0007 13.7322C9.95052 13.7322 8.95685 13.4979 8.05609 13.0859H5.83044C2.97467 13.0859 0.660156 15.4004 0.660156 18.2562V18.9025C0.660156 19.9729 1.5286 20.8413 2.59901 20.8413H19.4025C20.4729 20.8413 21.3413 19.9729 21.3413 18.9025V18.2562C21.3413 15.4004 19.0268 13.0859 16.171 13.0859Z"
+                                        fill="white" />
+                                </svg>
+                                تسجيل الدخول
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--====================== END HEADER ======================-->
+
+
+    <!--====================== MAIN ======================-->
+    <main>
+        <div class="max-w-[1400px] mx-auto px-4 sm:mt-10 mt-8">
+            <!-- 1SEC -->
+            <section>
+                <!-- titles -->
+                <div class="flex items-center justify-ceitems-center">
+                    <span
+                        class="text-[#2A2A2A] text-[20px] gap-4   font-medium flex items-center justify-center cursor-pointer">
+                        <svg class="mt-2" width="11" height="15" viewBox="0 0 11 19" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.93438 9.70418L1.2039 2.97899C0.706123 2.48122 0.706123 1.67632 1.2039 1.18384C1.70167 0.686074 2.50657 0.69137 3.00434 1.18384L10.6298 8.80396C11.1116 9.28584 11.1222 10.059 10.6668 10.5567L3.00964 18.2298C2.76075 18.4787 2.43243 18.6005 2.10941 18.6005C1.78639 18.6005 1.45808 18.4787 1.20919 18.2298C0.711418 17.732 0.711418 16.9271 1.20919 16.4347L7.93438 9.70418Z"
+                                fill="#2A2A2A" />
+                        </svg>
+
+                        رجوع
+
+                    </span>
+                </div>
+                <div class="flex items-center justify-center  mb-10 lg:mr-96 mt-10 lg:mt-0 ">
+                    <span
+                        class="text-[#2A2A2A] text-right sm:text-[30px] text-[22px] font-medium relative after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-[#E77E5C] after:bottom-[-10px] after:left-0">
+                        الإشتراكات الشهرية
+                    </span>
+                </div>
+
+
+                  
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-10">
+                    <div class="bg-white w-full  lg:w-1/5 h-auto lg:h-[726px] flex-shrink-0 drop-shadow-[0_15px_17px_rgba(0,0,0,0.03)] rounded-[20px] p-[30px] pt-10">
+                        <ul class="space-y-14">
+                            <li class="cursor-pointer menu-item text-[#6A6565] sm:text-[18px] text-[16px] font-medium ">الإشتراكات والدورات</li>
+                            <li class="cursor-pointer menu-item text-[#6A6565] sm:text-[18px] text-[16px] font-medium active">تغيير الصورة الشخصية</li>
+                            <li class="cursor-pointer menu-item text-[#6A6565] sm:text-[18px] text-[16px] font-medium">إسم المستخدم
+                              <br> والبريد الإلكتروني
+                            </li>
+                            <li class="cursor-pointer menu-item text-[#6A6565] sm:text-[18px] text-[16px] font-medium">كلمة السر</li>
+                            <li class="cursor-pointer menu-item text-[#6A6565] sm:text-[18px] text-[16px] font-medium">طرق الدفع</li>
+                          </ul>
+                      </div>
+                      <div class="bg-white w-full lg:w-4/5 h-[816px] flex-shrink-0 drop-shadow-[0_15px_17px_rgba(0,0,0,0.03)] rounded-[20px] p-[30px] pt-10">
+
+
+                        <div class="mb-4 border-b border-gray-200">
+                            <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab" role="tablist">
+                              <li class="me-2" role="presentation">
+                                <button class="inline-block p-4 border-b-2 rounded-t-lg tab-btn active-btn mx-10" id="subscriptions-tab" data-tabs-target="#subscriptions" type="button" role="tab" aria-controls="subscriptions" aria-selected="true">
+                                  الإشتراكات
+                                </button>
+                              </li>
+                              <li class="me-2" role="presentation">
+                                <button class="inline-block p-4 mx-5 border-b-2 rounded-t-lg tab-btn" id="courses-tab" data-tabs-target="#courses" type="button" role="tab" aria-controls="courses" aria-selected="false">
+                                  الدورات
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                          
+
+
+                          <div id="default-tab-content">
+                            <div class="p-4" id="subscriptions" role="tabpanel" aria-labelledby="subscriptions-tab">
+                              <p class="text-sm text-gray-500">
+                                <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-cols-2 gap-5 mt-6 mt-20">
+
+                                    <!-- Start of Subscription Card 1 -->
+                                    <div class="shadow-[0px_17px_32.5px_rgba(0,0,0,0.1)] rounded-[10px] bg-[#fff] h-auto lg:w-[480px]">
+                
+                                        <!-- Subscription Image & Title Section -->
+                                        <div
+                                            class="flex flex-col items-center justify-center relative rounded-[10px_10px_0px_0px] bg-[#F5F5F5] h-[350px]">
+                                            <img class="h-[200px]" src="assets/images/subs.png" alt="Subscription Image">
+                                            <div class="flex flex-col items-center px-5 py-5">
+                                                <span class="text-[25px] font-[500] text-[#e77e5c] text-right">باقة الخيانة الزوجية
+                                                    للجنسين</span>
+                
+                                                <div class="flex items-center gap-5 mt-5">
+                                                    <span class="text-[25px] font-[500] text-[#6A6565] text-right">شهريا /</span>
+                                                    <span
+                                                        class="text-[#84AA44] text-center font-inter text-[25px] font-normal leading-normal">
+                                                        133$ - 12.99$
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End of Subscription Image & Title Section -->
+                
+                                        <!-- Subscription Details Section -->
+                                        <div class="flex flex-col items-start px-10 py-5">
+                                            <span class="text-[20px] font-[500] text-[#2A2A2A] text-right mt-3">
+                                                الدورات المتاحة في الباقة 10-22
+                                            </span>
+                
+                                          
+                                            <!-- Subscription Button -->
+                                            <button 
+                                                class="w-[175px] h-[55px] flex-shrink-0 rounded-[28px] border-2 border-[#E77E5C] text-[#E77E5C] text-center font-medium mx-auto mt-12 mb-4">
+                                                إلغاء الإشتراك
+                                                                                        </button>
+                                            <!-- End of Subscription Button -->
+                
+                                        </div>
+                                        <!-- End of Subscription Details Section -->
+                
+                                    </div>
+                                    <!-- End of Subscription Card 1 -->
+                
+                                </div>
+                                <!-- End of Subscriptions Section -->
+                                
+                            </p>
+                            </div>
+
+
+
+
+                            <div class="hidden p-4 rounded-lg " id="courses" role="tabpanel" aria-labelledby="courses-tab">
+                                <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-cols-3 gap-5 mt-5">
+                                    <!-- Course Card 1 -->
+                                    <div class="shadow-[0px_17px_32.5px_rgba(0,0,0,0.1)] rounded-[10px] bg-[#f5f5f5] ">
+                                        <div
+                                            class="flex items-center justify-center relative  rounded-[10px_10px_0px_0px] bg-gradient-to-b from-[#84aa44] to-[#e5ac91] h-[225px]">
+                                            <img src="assets/images/course.png" alt="Course Image">
+                                            <div class="absolute inset-0 flex items-center justify-center z-[99999]">
+                                                <button  class="z-[9999999999]">
+                                                    <svg width="85" height="85" viewBox="0 0 85 85" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path opacity="0.54"
+                                                            d="M42.2988 0.736328C65.3361 0.736328 84.0116 19.4118 84.0116 42.4491C84.0116 65.4865 65.3361 84.162 42.2988 84.162C19.2614 84.162 0.585938 65.4865 0.585938 42.4491C0.585938 19.4118 19.2614 0.736328 42.2988 0.736328Z"
+                                                            fill="#2A2A2A" />
+                                                        <path
+                                                            d="M33.7224 32.6961C33.7224 30.3867 36.2224 28.9434 38.2224 30.0981L54.7224 39.6244C56.7224 40.7791 56.7224 43.6658 54.7224 44.8205L38.2224 54.3468C36.2224 55.5015 33.7224 54.0581 33.7224 51.7487L33.7224 32.6961Z"
+                                                            fill="#D9D9D9" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col items-start px-5 py-5 ">
+                                            <span class="text-[20px] font-[500] text-[#e77e5c] text-right">التعديل الذكي للسلوك </span>
+                                            
+                                            <span
+                                                class="relative text-[20px] mt-4 font-medium font-ge-dinar-one text-[#772b20] text-right inline-block">أ
+                                                / رامي يوسف</span>
+                                            <span class="text-[16px] text-[#2a2a2a] text-right pt-2">استشاري تسويق</span>
+
+                                            <div class="flex items-start gap-5  mt-7">
+                                                <div>
+                                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <circle cx="24" cy="24" r="24" fill="#E77E5C"/>
+                                                        <path d="M16.1585 21.7938C15.7583 22.0066 15.4235 22.3243 15.19 22.7129C14.9565 23.1015 14.8332 23.5463 14.8332 23.9996C14.8332 24.4529 14.9565 24.8977 15.19 25.2863C15.4235 25.6749 15.7583 25.9926 16.1585 26.2054L26.8352 32.0113C28.5543 32.9471 30.666 31.7304 30.666 29.8063V18.1938C30.666 16.2688 28.5543 15.0529 26.8352 15.9871L16.1585 21.7938Z" fill="white"/>
+                                                        </svg>
+                                                        
+                                                </div>
+
+                                                <div>
+                                                    <svg class="mt-4" width="200" height="43" viewBox="0 0 260 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M224.505 19.487H216.8V24.064C217.122 23.6347 217.598 23.2743 218.226 22.983C218.87 22.6917 219.553 22.546 220.273 22.546C221.561 22.546 222.604 22.822 223.401 23.374C224.214 23.926 224.789 24.6237 225.126 25.467C225.479 26.3103 225.655 27.1997 225.655 28.135C225.655 29.2697 225.433 30.2817 224.988 31.171C224.559 32.045 223.907 32.735 223.033 33.241C222.175 33.747 221.117 34 219.859 34C218.188 34 216.846 33.586 215.834 32.758C214.822 31.93 214.217 30.8337 214.017 29.469H216.57C216.739 30.1897 217.115 30.7647 217.697 31.194C218.28 31.608 219.008 31.815 219.882 31.815C220.971 31.815 221.784 31.4853 222.32 30.826C222.872 30.1667 223.148 29.2927 223.148 28.204C223.148 27.1 222.872 26.2567 222.32 25.674C221.768 25.076 220.956 24.777 219.882 24.777C219.131 24.777 218.495 24.9687 217.973 25.352C217.467 25.72 217.099 26.226 216.869 26.87H214.385V17.187H224.505V19.487ZM228.385 25.398C228.385 22.7453 228.83 20.6753 229.719 19.188C230.624 17.6853 232.172 16.934 234.365 16.934C236.558 16.934 238.099 17.6853 238.988 19.188C239.893 20.6753 240.345 22.7453 240.345 25.398C240.345 28.0813 239.893 30.182 238.988 31.7C238.099 33.2027 236.558 33.954 234.365 33.954C232.172 33.954 230.624 33.2027 229.719 31.7C228.83 30.182 228.385 28.0813 228.385 25.398ZM237.769 25.398C237.769 24.156 237.685 23.1057 237.516 22.247C237.363 21.3883 237.041 20.6907 236.55 20.154C236.059 19.602 235.331 19.326 234.365 19.326C233.399 19.326 232.671 19.602 232.18 20.154C231.689 20.6907 231.36 21.3883 231.191 22.247C231.038 23.1057 230.961 24.156 230.961 25.398C230.961 26.686 231.038 27.767 231.191 28.641C231.344 29.515 231.666 30.2203 232.157 30.757C232.663 31.2937 233.399 31.562 234.365 31.562C235.331 31.562 236.059 31.2937 236.55 30.757C237.056 30.2203 237.386 29.515 237.539 28.641C237.692 27.767 237.769 26.686 237.769 25.398ZM242.705 21.281C242.705 20.1617 243.027 19.2877 243.671 18.659C244.331 18.015 245.174 17.693 246.201 17.693C247.229 17.693 248.064 18.015 248.708 18.659C249.368 19.2877 249.697 20.1617 249.697 21.281C249.697 22.4003 249.368 23.282 248.708 23.926C248.064 24.57 247.229 24.892 246.201 24.892C245.174 24.892 244.331 24.57 243.671 23.926C243.027 23.282 242.705 22.4003 242.705 21.281ZM256.735 17.992L247.558 34H244.982L254.159 17.992H256.735ZM246.201 19.28C245.235 19.28 244.752 19.947 244.752 21.281C244.752 22.6303 245.235 23.305 246.201 23.305C246.661 23.305 247.014 23.144 247.259 22.822C247.52 22.4847 247.65 21.971 247.65 21.281C247.65 19.947 247.167 19.28 246.201 19.28ZM252.066 30.688C252.066 29.5687 252.388 28.6947 253.032 28.066C253.692 27.422 254.535 27.1 255.562 27.1C256.574 27.1 257.402 27.422 258.046 28.066C258.706 28.6947 259.035 29.5687 259.035 30.688C259.035 31.8073 258.706 32.689 258.046 33.333C257.402 33.977 256.574 34.299 255.562 34.299C254.535 34.299 253.692 33.977 253.032 33.333C252.388 32.689 252.066 31.8073 252.066 30.688ZM255.539 28.687C254.573 28.687 254.09 29.354 254.09 30.688C254.09 32.022 254.573 32.689 255.539 32.689C256.505 32.689 256.988 32.022 256.988 30.688C256.988 29.354 256.505 28.687 255.539 28.687Z" fill="#E77E5C"/>
+                                                        <line opacity="0.1" x1="259" y1="0.5" y2="0.5" stroke="#2A2A2A"/>
+                                                        <path d="M259 1L110 1" stroke="#E77E5C" stroke-width="2" stroke-linecap="round"/>
+                                                        </svg>
+                                                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of Course Card 1 -->
+                                </div>
+                            </div>
+                          </div>
+                          
+                          <script>
+                            // الحصول على التابات والمحتوى
+                            const tabs = document.querySelectorAll('.tab-btn');
+                            const tabContent = document.querySelectorAll('#default-tab-content > div');
+                          
+                            // تفعيل التاب النشط عند الضغط
+                            tabs.forEach((tab, index) => {
+                              tab.addEventListener('click', () => {
+                                // إزالة التفعيل عن جميع التابات
+                                tabs.forEach(t => t.classList.remove('active-btn'));
+                                tabContent.forEach(content => content.classList.add('hidden'));
+                          
+                                // تفعيل التاب الحالي
+                                tab.classList.add('active-btn');
+                                tabContent[index].classList.remove('hidden');
+                              });
+                            });
+                          </script>
+                          
+                        
+                      </div>
+
+                      
+                </div>
+
+           
+
+
+            </section>
+            <!-- END SEC1 -->
+
+
+        </div>
+    </main>
+
+    <!--====================== END MAIN ======================-->
+
+
+    <!--====================== FOOTER ======================-->
+    <footer class="bg-[#2F2E2D]  mt-28">
+        <div class="  max-w-[1400px] mx-auto p-4 md:py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <a href="" class="">
+                    <img src="assets/images/logofooter.svg" alt="Logo" />
+                </a>
+                <ul
+                    class="sm:my-0 my-16 flex flex-col items-center  text-sm font-medium text-gray-500  sm:flex-row gap-10">
+                    <li class="flex items-center me-4 md:me-6">
+                        <a href="#" class="hover:underline text-white text-[16px]">من نحن</a>
+                    </li>
+                    <li class="flex items-center me-4 md:me-6">
+                        <a href="#" class="hover:underline text-white text-[16px]">سياسة الدفع والإسترجاع</a>
+                    </li>
+                    <li class="flex items-center me-4 md:me-6">
+                        <a href="#" class="hover:underline text-white text-[16px]">تواصل معنا</a>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="#" class="hover:underline text-white text-[16px]">الشروط والأحكام</a>
+                    </li>
+                </ul>
+
+                <div class="qrcode-footer flex items-center gap-5">
+                    <div class="flex item-center gap-5 relative">
+                        <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 43 42"
+                                fill="none">
+                                <path
+                                    d="M42.5 21C42.5 32.3108 33.1091 41.5 21.5 41.5C9.89086 41.5 0.5 32.3108 0.5 21C0.5 9.68919 9.89086 0.5 21.5 0.5C33.1091 0.5 42.5 9.68919 42.5 21Z"
+                                    stroke="#F5F5F5" />
+                                <path
+                                    d="M31.1173 15.6538C30.8695 14.7207 30.1393 13.9858 29.2122 13.7364C27.5318 13.2832 20.7936 13.2832 20.7936 13.2832C20.7936 13.2832 14.0553 13.2832 12.3749 13.7364C11.4478 13.9858 10.7176 14.7207 10.4698 15.6538C10.0195 17.3451 10.0195 20.874 10.0195 20.874C10.0195 20.874 10.0195 24.4028 10.4698 26.0941C10.7176 27.0272 11.4478 27.7315 12.3749 27.9809C14.0553 28.4341 20.7936 28.4341 20.7936 28.4341C20.7936 28.4341 27.5318 28.4341 29.2122 27.9809C30.1393 27.7315 30.8695 27.0272 31.1173 26.0941C31.5676 24.4028 31.5676 20.874 31.5676 20.874C31.5676 20.874 31.5676 17.3451 31.1173 15.6538ZM18.5898 24.0778V17.6701L24.2216 20.874L18.5898 24.0778Z"
+                                    fill="#F5F5F5" />
+                            </svg>
+                        </a>
+
+                        <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 43 42"
+                                fill="none">
+                                <path
+                                    d="M42.5 21C42.5 32.3108 33.1091 41.5 21.5 41.5C9.89086 41.5 0.5 32.3108 0.5 21C0.5 9.68919 9.89086 0.5 21.5 0.5C33.1091 0.5 42.5 9.68919 42.5 21Z"
+                                    stroke="#F5F5F5" />
+                                <path
+                                    d="M26.5706 21.7732L27.188 17.7503H23.3279V15.1398C23.3279 14.0392 23.8671 12.9664 25.5959 12.9664H27.3508V9.54131C27.3508 9.54131 25.7583 9.26953 24.2357 9.26953C21.0568 9.26953 18.9789 11.1963 18.9789 14.6843V17.7503H15.4453V21.7732H18.9789V31.4983H23.3279V21.7732H26.5706Z"
+                                    fill="#F5F5F5" />
+                            </svg>
+                        </a>
+
+
+                        <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 43 42"
+                                fill="none">
+                                <path
+                                    d="M42.5 21C42.5 32.3108 33.1091 41.5 21.5 41.5C9.89086 41.5 0.5 32.3108 0.5 21C0.5 9.68919 9.89086 0.5 21.5 0.5C33.1091 0.5 42.5 9.68919 42.5 21Z"
+                                    stroke="#F5F5F5" />
+                                <path
+                                    d="M21.8363 14.9924C18.5115 14.9924 15.8297 17.6742 15.8297 20.999C15.8297 24.3238 18.5115 27.0056 21.8363 27.0056C25.1611 27.0056 27.8429 24.3238 27.8429 20.999C27.8429 17.6742 25.1611 14.9924 21.8363 14.9924ZM21.8363 24.9041C19.6878 24.9041 17.9313 23.1528 17.9313 20.999C17.9313 18.8452 19.6825 17.094 21.8363 17.094C23.9901 17.094 25.7414 18.8452 25.7414 20.999C25.7414 23.1528 23.9849 24.9041 21.8363 24.9041ZM29.4896 14.7467C29.4896 15.5257 28.8623 16.1478 28.0886 16.1478C27.3097 16.1478 26.6876 15.5204 26.6876 14.7467C26.6876 13.9731 27.3149 13.3457 28.0886 13.3457C28.8623 13.3457 29.4896 13.9731 29.4896 14.7467ZM33.4679 16.1687C33.379 14.2919 32.9504 12.6295 31.5755 11.2599C30.2058 9.89026 28.5434 9.46159 26.6667 9.36749C24.7325 9.25771 18.935 9.25771 17.0007 9.36749C15.1292 9.45636 13.4668 9.88503 12.0919 11.2547C10.7171 12.6243 10.2936 14.2867 10.1995 16.1634C10.0897 18.0977 10.0897 23.8951 10.1995 25.8294C10.2884 27.7061 10.7171 29.3685 12.0919 30.7381C13.4668 32.1078 15.124 32.5365 17.0007 32.6306C18.935 32.7403 24.7325 32.7403 26.6667 32.6306C28.5434 32.5417 30.2058 32.113 31.5755 30.7381C32.9451 29.3685 33.3738 27.7061 33.4679 25.8294C33.5777 23.8951 33.5777 18.1029 33.4679 16.1687ZM30.9691 27.9048C30.5613 28.9294 29.7719 29.7188 28.7421 30.1317C27.1999 30.7434 23.5406 30.6022 21.8363 30.6022C20.1321 30.6022 16.4675 30.7381 14.9306 30.1317C13.9059 29.724 13.1166 28.9346 12.7036 27.9048C12.0919 26.3626 12.2331 22.7032 12.2331 20.999C12.2331 19.2948 12.0972 15.6302 12.7036 14.0933C13.1113 13.0687 13.9007 12.2793 14.9306 11.8663C16.4727 11.2547 20.1321 11.3958 21.8363 11.3958C23.5406 11.3958 27.2052 11.2599 28.7421 11.8663C29.7667 12.2741 30.5561 13.0634 30.9691 14.0933C31.5807 15.6354 31.4396 19.2948 31.4396 20.999C31.4396 22.7032 31.5807 26.3678 30.9691 27.9048Z"
+                                    fill="#F5F5F5" />
+                            </svg>
+                    </div>
+                    </a>
+
+
+                    <div class="flex">
+
+
+                        <svg width="80" height="80" viewBox="0 0 112 112" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path
+                                d="M0 14C0 6.26801 6.26801 0 14 0H98C105.732 0 112 6.26801 112 14V98C112 105.732 105.732 112 98 112H14C6.26801 112 0 105.732 0 98V14Z"
+                                fill="url(#pattern0_277_6646)" />
+                            <defs>
+                                <pattern id="pattern0_277_6646" patternContentUnits="objectBoundingBox" width="1"
+                                    height="1">
+                                    <use xlink:href="#image0_277_6646" transform="scale(0.00333333)" />
+                                </pattern>
+                                <image id="image0_277_6646" width="300" height="300"
+                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAYAAAB5fY51AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAABgAAAAYADwa0LPAAARCUlEQVR42u3dvZITsRKGYXFi7wZQXCUmp/YCKGKguMgNCGxyn4CdOnV+7NaZVqv707xP1YS2JY3cxY4/Wu9ut9utAYCAf2QPAAB6UbAAyKBgAZBBwQIgg4IFQAYFC4AMChYAGRQsADIoWABkULAAyKBgAZBBwQIgg4IFQAYFC4AMChYAGRQsADIoWABkULAAyKBgAZBBwQIgg4IFQAYFC4AMChYAGRQsADIoWABkULAAyKBgAZBBwQIgg4IFQAYFC4AMChYAGRQsADIoWABklClYHz58aO/evVv2svz48aM9PT393+/79PTUfvz4kX375Od3b3y9n3/0/TvLu9vtdsseRGt/b/jv37+zhxHGWuanp6f258+fXe99Op3a9XrNnqL0/B6Nr+fzj75/ZynzL6yj2/tl9r6W+dmfobC+R0HBAiCDggVABgULgAwKVhGn0ynltTN4H5hHz6/6Dxb4FwpWEV+/ft31xTydTu3bt2/Zw7/rer22L1++7H599Py848NktyLev39/a63dvV5fX7OH6Br/6r5//347nU4P1+DRdT6fb5fLpez4LOzfOWRyWK+vr+3jx4/Zw9w9/iLLHMaTs2qttcvl0p6ensqOz7p/7N85+JMQQ3izSpHFasT4UAMFC4AMChYAGRQsADIoWHBTyDFVz6qhDwULLio5pr05N9SyTMFS7wfk7ce09/291/Pzc/v161f59fn8+XO7Xq/tdrv923W5XNr5fA4fv0V9/05bp1VyWNE3xZvDsV7v7cdk8eaQomWuz/V6bc/Pz67xHX3/zrLMv7DURfdjqlysvOOvngHDOBQsADIoWABkULAAyKBgiVDIOu1F3AC9KFgiXl5elixa1ft5oRYKloifP3+25+fnsJzW+Xxul8vlv3JK0df1em2fPn3KXl6IoGCJ+/PnT3t5eXG/z9evX/l5H+VRsBYwImNFsYICChYAGRQsADIoWABkULAW8SjysGIcYvQcH2XByInVQcFaxL2clkq/qqj597rXL4ucWDHZ54xtvOe6tZ3nzfVe3vFbosfvnd+9c/1Op9Pt+/fv4fsjat6jxn/0/TsL/bA6Wcvk7SeU3WTNGl90vy5L5PqMGP/R9+8s/EmILtH9uqrODbVQsADIoGABkEHBAiCDglVEZtan57Mzc0rRD/TJWemgYBWRdW5eb84oK6cUnSMjZyUmO1ex8eZYskXlWC6Xy+18Pps5m/P5fLtcLrs/x5uzinr9qMu7Phb27xzL5LCyReZYes7Nu1wurhYx3pxV5OtH8K6Phf07B38SCuj5onm/jN6cVeTrR6Df1xooWABkULAAyKBgAZBBwRJBvyaAgiWDfk1AqxOwsHIg6pclOwflHX/06+/lqHpzatHrd/T9O4tMDkudtczZOSirH5M1/ujXP8pR9eTUotf/6Pt3FgrWJNlfeF4f+/qj799ZeIYFQAYFC4AMChYAGRSsIrw5q8zXj+hXpTx/zEPBKsKbs8p6/ah+Varzx2TZuQr0yc5peftVqc8fNZSJNeCx7JyWt1+Vd5tlzx81ULBEZOeMvAd9erdZ9vxRA8+wAMigYAGQQcECIIOCJeLoOaPonBgP3TVQsEQcPWcUnRN7eXmhaCnIzlVsos+lu3eNyuGsnhPyrnO0VffPrPFV33+bMrGG6HPpHhmRw1k9J5Qda7CsvH9mjK/6/tuUKVjeL4SXdxlWzwlVL1ir75/o8VXffxueYQGQQcECIIOCBUAGBauNySGtnhPyrNGMnFdmlqx6jm2lnN7hC9aoHNLqOaF787PMynntHZ9X9Rzbcjm97FzFpgWfS3fv9ZvoHEp2ziZbVs5n1P6Inp93H2Tv71lkYg3ec+kevb61+BxKds4mW2bOZ8T+iJ6fN9aQvb9nkSlY1jCzX++dn1eR27h7/tHjz76/3v1nyd7fsxz+GRYAHRQsADIoWABkLFOwqveLivzJvVJO5n+p8EA38/5Wvz9KlilY1ftFReWEyuVk/sOocwu9su5v9fsjJztXsWmi59pZl1rOZfT69l5Rn69yf/euW+/6Ra//LMvEGiyZ5/Ip5Vz2WvncQsuI+0usoc9hClb1nIy67PVRv78UrD7LPMMCsD4KFgAZFCwAMihYbx49NPU+UF09h7P6DwozVO83VgUF6829flPeHNHqOZwqOSt11fuNlZGdq9i04JyI9f7eK7uf0t73r3Jl75/o8Wf3o4pe/1mINQyS3U/J8/4VRN9f6/2jYwXZ/ahWiTVQsAbJ/sJlz98re/1Wz0Flf/4oPMMCIIOCBUAGBQuAjDIFS72fUGRWS2H+mUY8sI7OQWXf3+zPH6VMwVLvJ+Q9N1B9/llG5cCic1DZ9zf784fJzlX0ij73zXvu4d7L268pev5eveu3d/69F9ZQJtZgiT73zXvuoYe3X1P0/L161s/ahtn9tlCDTMHKPncwO8eVPX+v7PUX2eYwlHmGBQAWChYAGRQsADJkClb1cwcrz79Cv6rs8VdYA/jJFKzq5w5WnX+VflXZ4/fm5FBEdq5ik90vyNJ25phG5ZD2rl/vlX1/svp1VdlfUfOvMr9RysQasvsFWaJzXN7bEJ1TWrlfV4X9FTn/CvMbpUzBys4JRY+ver8r9fF7Vd9f6vMbReYZFgBQsADIoGABkFGmYFXPSVXOgc04NzH6/mTe4wr7C33KFKzqOamqObBZ5yZG35+9/ai8quwvdMrOVfTam1OZ1W8q6vWjLqvfVfb87xnVjyzq3MhR+2/v+Gfl/KooE2uweHIqM/pNRb5+BKvfVfb8HxnRjyzy3EhLhX5tIl9zk0zBqp4zyu73pD5/S3Y/rNX3n4oyz7AAwELBAiCDggVAhkTBis4ZRZ9r5805RY6tl7VGlXNaFXJWj9avwv5TUb5gReeMos+18+acvEbljKx+UlVzWlVyVvfWr8r+k5Gdq9h4c0h7c0a9V9T8rJxOb87GmzPauy7R/bCqvP/e9Rl1Rc1/1v0dpUyswZtD8uSMeniXyZNT6snZeHNGnp/to/thVXh/9fY30TmyWcoUrOyci/f9vfPzjj96fJbs9Yl+f/WClX1/Ryn/DAsANhQsADIoWABklClY0Tmb7CxK9rl8nvFFvrZXZBav+v5R6Jc2S5mCFZ2zyeq3ZH1+lXMFq+ecvOcKVs3JWVT6pU2TnavINqqfUHY/rOjxRds7b+uqMr9o0TnGKsrEGjKN6CeU3Q8renzRImMDFeYXLTrHWAUF6012Tio7h5a9DbL7galbJWdlKfMMCwAsFCwAMihYAGRQsN5knzuYmUOrlLOJsPr8RsxR5UcJCtab7HMHs3Jo5XI2g60+v403J+bNuU2TnauYJTuHlP35e8dnXaPGb31O1rmC3kv9XMcq+3NzmFhDdg4p+/M947OMGL/nXL7o+Xmpn+tYYX9uDlOwsnNI2Z/vHZ/FO/7sfljRrPFXn3/2/tzwDAuADAoWABkULAAyDlOwsnNI2Z//SIV+SZXXJ3JuM+Zf4f6OcpiClZ1Dyv78e6r0S6q6Pl7ZObkq93eY7FzFJqqfVPS5dtY1a/zROaOoHNSs9YmeX7Tq93eWMrGGyH5S0efaWWaMPzpnFJmDmrE+0TmvaNXv7yxlClZ2Pyrv+CzR46/eTyr7/lbPwVmq399ZDvMMC4A+ChYAGRQsADLKFKzoHE5mFiU7h6PAuj9HX5/IOSqtX5mCFZ3DiTrXzpKdw1Fh3Z+jr0/UuYhy65edqxilLdLvJ2r+93I2o85l9I4v+v5Ezy+r31nv/bNyVtX7tW3KxBq8PD/7Vur3EzX/RzmbEecyesf3yIx+W975ZfY767l/Vs6qer+2DQXrjfoyVM8pZd+f7PlF76/q93+UMs+wAMBCwQIgg4IFQMYyBSu7Z1B1j+bXM/eVeiqNnt+M9cNfyxSsw5zLNnh+vf2SsnJs2etjmbV+eJOdq+i1NyfiPZct+pqVM6o6/uo5sOxrVL+v6NfPIhNr8OREvOeyRZuRM6o8/uo5sGwj+n1Z66cSa5ApWNX7RXmpfyGjx6++Pl7RBUelYC3zDAvA+ihYAGRQsADIkClY3n5IlX9Sjz7Xb4bInFb23BREfj8qrb9MwfL2Q6qaA4o+12+WqJyWXL+mJFHfj3Lrn52rwF/R5x7eE51Tq9JPyTuPqHP7ZuXQVPpdWWRiDauLPvfwkeicWoV+St5YQ+S5fTNyaCr9riwUrCKq94vyyt5m2evrHV/0/c2+P71knmEBAAULgAwKFgAZFKwiMvt5RT9wrRAnqTAGD5WH4tEoWEVk9fPq7ee0V5UcT3ZOzYt+Wm+ycxWb9+/fp/ceirz2qt7Pa7u8OSVvTii6X1r0+Peu+6x+WVWUiTV8+PCh/f79O3sYYTzLXL2fV2v+nJI3JxTdL826f97xR5/buEqsgYI1iXeZq/dzip6f9f6rv94SPb4qeIYFQAYFC4AMChYAGRQsEZV/ko/u5zXi/b3nMmaP3zO/CuMbhYIlomqOKLqf16j3957LmD3+vfOrMr5hsnMVGyuH9fr6mj1E1/ij9OaIovo59Yrux2TN33tFixq3Wr8ri0ys4fX1tX38+DF7mLvHH7nMPTmiyH5OPaL7Mam3x4kcv1K/Kwt/Ei6gpxBlFqvW2sPmhHsbF6LPSutLwQIgg4IFQAYFC4AMCtYCqj9Q7Rlf5X5e0Z+hPv6ZKFjiovtZzRpf1X5e3vGtPv7psnMVG28OqyXncKJzWHvPLez9/Kh+VFWuezk09X5jRzlXcrNMDis7hxOdw/KcW9jz+ZH9qCp4lENT7zd2hHMlN/xJKCK6GHhzUpWLVWuPc2jZGbXq4690bylYAGRQsADIoGABkEHBEuB94Gm1panyQDVTxdY9VVRaGwpWcd6cjtXvqHqOa5aq/cayleuXlZ2r2Bw9h+XNMVn9rqJzXN7x3TMqZ7RXdL+xUecietcnu19aL3JYnaxl8uawvDkmq99VdI7LWn9PP64ROSPPNo/uNzbiXETv/s/ul9aLPwmL8GZdrM2WnaXxHrJafezK86syhh4ULAAyKFgAZFCwAMigYMHU83N/5Ll3q+fEvP3ConN6lVCw8FBvDifq3LvVc2LefmHROb1ysnMVm6PnsKLHZ71+b45rVL+k6H5aXt73z+4Xln1/RyGH1claJm8Oyzt+7/t7clwj+iVF99PybnNr/az3z+4Xln1/R+FPQrTWfDmuEV/E7JxYtOz5Zd/fUShYAGRQsADIoGABkEHBWsCMfleROSsF3vkfYY1moGCJm9XvKipnpcI7f/ptDZKdq9h4c1jZonNY2f2uLN4cz95xj5pf1RzSrH5g0ftjlGVyWNmic1jZ/a4s3hxPdo6ucg5pRj8wb85sFv4kFFG935VKjkdx/Cq9qmagYAGQQcECIIOCBUAGBWsRnp/MK/zcHjmGEe9d5T//Rs1fJWdHwVrE3pxPlRxVVE5p1Pzu9aOqLruf2XDZuYqNlWNSvyze13tF56j2ij4XsHf8Udeo9V2l35VFJoelzlrm7BxMdI7KM/7ocwF7xh9pxPqu0u/KQsGapHrB8n5+9Piz3z9a9Ppm769ReIYFQAYFC4AMChYAGRSsIrJzMJH9nkaMP/P9o81Y3+z9NQoFq4jsHExUv6dR4896/2iz1jd7f41S5ldCALDwLywAMihYAGRQsADIoGABkEHBAiCDggVABgULgAwKFgAZFCwAMihYAGRQsADIoGABkEHBAiCDggVABgULgAwKFgAZFCwAMihYAGRQsADIoGABkEHBAiCDggVABgULgAwKFgAZFCwAMihYAGRQsADIoGABkEHBAiCDggVABgULgAwKFgAZFCwAMv4JttvKfYuHwHUAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjItMDktMjBUMTg6MzQ6MzkrMDA6MDBkoRQ4AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIyLTA5LTIwVDE4OjM0OjM5KzAwOjAwFfyshAAAAABJRU5ErkJggg==" />
+                            </defs>
+                        </svg>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <span class="block text-sm text-gray-500 sm:text-center sm:mt-0 mt-10"><a href="https://flowbite.com/"
+                    class="hover:underline text-white">COPYRIGHT <span class="text-[#474747]"> ©</span> Estisharati
+                    2022</span>
+        </div>
+    </footer>
+    <!--====================== END FOOTER ======================-->
+
+
+    <!--====================== SCRIPTS ======================-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

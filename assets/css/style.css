@@ -155,6 +155,49 @@ select:not([size]) {
 
 
 
+.menu-item.active {
+    color: #E77E5C; 
+    position: relative;
+  }
+  
+  .menu-item.active::before {
+    content: "";
+    position: absolute;
+    right: -15px;
+    top: -10px;
+    bottom: 20px;
+    width: 3px;
+    background-color: #E77E5C; 
+    height: 41px;
+flex-shrink: 0;
+stroke-width: 2px;
+stroke: #E77E5C;
+  }
+
+  .tab-btn {
+    color: #6A6565 !important; /* اللون الافتراضي */
+    text-align: center !important;
+    font-family: "GE Dinar One" !important;
+    font-size: 18px !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    line-height: normal !important;
+    border-color: transparent !important; /* إزالة الحدود الافتراضية */
+  }
+  
+  .active-btn {
+    color: #E77E5C !important; /* اللون البرتقالي عند التفعيل */
+    border-color: #E77E5C !important; /* لون الخط عند التفعيل */
+  }
+  
+  .tab-btn:hover {
+    color: #E77E5C !important; /* اللون عند التمرير */
+    border-color: #E77E5C !important; /* لون الخط عند التمرير */
+  }
+  
+  
+  
+
 
 
 
