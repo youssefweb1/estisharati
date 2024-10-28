@@ -1,0 +1,490 @@
+/* ====================== font ====================== */
+@font-face {
+    font-family: 'GE Dinar One';
+    src: url('../font/Questv1-Regular.otf') format('opentype');
+}
+
+body {
+    font-family: 'GE Dinar One', sans-serif;
+    background-color: #F9F8F8 !important;
+    direction: rtl !important;
+}
+
+/* ====================== end font ====================== */
+
+
+
+/* ====================== Custom ====================== */
+#dropdownInformation {
+    inset: 11px auto auto 80px !important;
+}
+
+li {
+    list-style-type: none !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    --tw-ring-inset: unset;
+    --tw-ring-offset-width: 0;
+    --tw-ring-offset-color: transparent;
+    --tw-ring-color: transparent;
+    --tw-ring-offset-shadow: unset;
+    --tw-ring-shadow: unset;
+    border-color: black !important;
+
+}
+
+select:not([size]) {
+    background-position: left 2rem center !important;
+    padding-right: 1rem !important;
+}
+#loader {
+    display: none;
+}
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    border: 3px solid;
+    border-color: #FFF #FFF transparent transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  .loader::after,
+  .loader::before {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3px solid;
+    border-color: transparent transparent #FF3D00 #FF3D00;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotationBack 0.5s linear infinite;
+    transform-origin: center center;
+  }
+  .loader::before {
+    width: 32px;
+    height: 32px;
+    border-color: #FFF #FFF transparent transparent;
+    animation: rotation 1.5s linear infinite;
+  }
+      
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+  @keyframes rotationBack {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+      
+
+/* ============= Project Cards ============= */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #E77E5C;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #E77E5C;
+}
+
+.no-scrollbar {
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* ====================== end custom ====================== */
+
+
+
+/* ====================== Navigation Styling ====================== */
+
+
+.nav-li-active {
+    color: #E77E5C;
+    text-align: right;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    position: relative;
+}
+
+.nav-li-active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 44px;
+    width: 100%;
+    height: 2.8px;
+    background-color: #E77E5C;
+    stroke-width: 2px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.nav-li {
+    color: #5A5A5A;
+    text-align: right;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2.8px;
+    background-color: #E77E5C;
+    top: 44px;
+    transition: width 0.3s ease;
+}
+
+.nav-li:hover::after {
+    width: 100%;
+    top: 44px;
+}
+
+.nav-li:hover,
+.footer-li:hover {
+    color: #E77E5C;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.qrcode-index2 {
+    display: none;
+}
+
+/* ====================== end Navigation Styling ====================== */
+
+
+
+.menu-item.active {
+    color: #E77E5C; 
+    position: relative;
+  }
+  
+  .menu-item.active::before {
+    content: "";
+    position: absolute;
+    right: -15px;
+    top: -10px;
+    bottom: 20px;
+    width: 3px;
+    background-color: #E77E5C; 
+    height: 41px;
+flex-shrink: 0;
+stroke-width: 2px;
+stroke: #E77E5C;
+  }
+
+  .tab-btn {
+    color: #6A6565 !important; /* اللون الافتراضي */
+    text-align: center !important;
+    font-family: "GE Dinar One" !important;
+    font-size: 18px !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    line-height: normal !important;
+    border-color: transparent !important; /* إزالة الحدود الافتراضية */
+  }
+  
+  .active-btn {
+    color: #E77E5C !important; /* اللون البرتقالي عند التفعيل */
+    border-color: #E77E5C !important; /* لون الخط عند التفعيل */
+  }
+  
+  .tab-btn:hover {
+    color: #E77E5C !important; /* اللون عند التمرير */
+    border-color: #E77E5C !important; /* لون الخط عند التمرير */
+  }
+  
+  
+  
+
+
+
+
+
+/* ====================== Calendar ====================== */
+
+/* Default design for larger devices */
+[data-calendar-theme=light] .vanilla-calendar-header__content,
+[data-calendar-theme=light] .vanilla-calendar-month,
+[data-calendar-theme=light] .vanilla-calendar-year {
+    color: #6A6565;
+    text-align: center;
+    font-family: "Segoe UI";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+/* Dark theme styles */
+[data-calendar-theme=dark] .vanilla-calendar-day__btn {
+    background-color: transparent !important;
+}
+
+[data-calendar-theme=dark].vanilla-calendar {
+    height: 100% !important;
+    background-color: white;
+}
+
+[data-calendar-theme=dark] .vanilla-calendar-day__btn_selected,
+[data-calendar-theme=dark] .vanilla-calendar-day__btn_selected:hover,
+[data-calendar-theme=light] .vanilla-calendar-day__btn_selected,
+[data-calendar-theme=light] .vanilla-calendar-day__btn_selected:hover {
+    background-color: #E77E5C !important;
+    color: white !important;
+    font-size: 19px !important;
+    padding: 3px
+}
+
+/* Button styles */
+.vanilla-calendar-day__btn {
+    width: 0 !important;
+    border-radius: 50px !important;
+    color: white !important;
+}
+
+/* Adjusting weekend and weekday text styles */
+[data-calendar-theme=dark] .vanilla-calendar-week__day_weekend,
+.vanilla-calendar-week__day {
+    color: #6A6565 !important;
+    font-size: 20px !important;
+    padding-top: 40px;
+    font-weight: 400 !important;
+}
+
+/* Today button style */
+[data-calendar-theme=light] .vanilla-calendar-day__btn_today {
+    font-size: 18px !important;
+}
+
+/* Calendar days container */
+.vanilla-calendar-days {
+    margin-top: 25px !important;
+}
+
+/* Navigation arrows and header content style */
+.vanilla-calendar .calendar-nav .prev,
+.vanilla-calendar .calendar-nav .next,
+[data-calendar-theme=dark] .vanilla-calendar-header__content,
+[data-calendar-theme=dark] .vanilla-calendar-month,
+[data-calendar-theme=dark] .vanilla-calendar-year {
+    color: #6A6565 !important;
+    font-size: 20px !important;
+}
+
+/* Button styles for day selection */
+.vanilla-calendar-day__btn {
+    color: #BCBCBC !important;
+    font-size: 20px !important;
+}
+
+/* Header customization */
+.vanilla-calendar-header__content {
+    flex-grow: 0 !important;
+}
+
+.vanilla-calendar-header {
+    border-bottom: 1px solid #E4E5E7 !important;
+    padding-bottom: 40px;
+}
+
+/* Custom text next to year */
+.custom-text {
+    position: absolute;
+    right: 0;
+    color: #6A6565;
+    text-align: right;
+    font-family: "GE Dinar One";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 600px) {
+    .vanilla-calendar-days {
+        margin-top: 10px !important;
+    }
+
+    /* Decrease font sizes and padding for mobile */
+    [data-calendar-theme=light] .vanilla-calendar-header__content,
+    [data-calendar-theme=light] .vanilla-calendar-month,
+    [data-calendar-theme=light] .vanilla-calendar-year {
+        font-size: 12px;
+        /* Smaller font for mobile */
+    }
+
+    [data-calendar-theme=dark] .vanilla-calendar {
+        padding: 10px 25px !important;
+        /* Less padding on mobile */
+    }
+
+    /* Make days and buttons smaller for better fit */
+    .vanilla-calendar-day__btn {
+        font-size: 12px !important;
+        /* Smaller button text */
+    }
+
+    .vanilla-calendar-days {
+        gap: 0.5rem !important;
+        /* Reduce gap between days */
+    }
+    /* Today button style */
+[data-calendar-theme=light] .vanilla-calendar-day__btn_today {
+    font-size: 12px !important;
+}
+
+    /* Header customization for mobile */
+    .vanilla-calendar-header {
+        padding-bottom: 10px;
+    }
+
+    /* Reduce size of custom text */
+    .custom-text {
+        font-size: 12px;
+        /* Smaller text for mobile */
+    }
+
+    [data-calendar-theme=dark] .vanilla-calendar-week__day_weekend,
+    .vanilla-calendar-week__day {
+        font-size: 11px !important;
+    }
+
+    [data-calendar-theme=dark] .vanilla-calendar-week__day_weekend,
+    .vanilla-calendar-week__day {
+        padding-top: 5px !important;
+    }
+}
+
+@media (max-width: 345px) {
+    .custom-text {
+        display: none !important;
+    }
+
+}
+
+/* ====================== end Calendar ====================== */
+
+
+
+
+
+/* ====================== Video Styling ====================== */
+
+.video-js .vjs-big-play-button {
+    position: absolute;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+    color: #efc2ad80;
+}
+
+/* ====================== end Video Styling ====================== */
+
+
+
+
+
+/* ====================== media queries ====================== */
+@media (max-width: 768px) {
+    footer {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .qrcode-footer {
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+
+}
+
+@media (max-width: 576px) {
+    .search-div {
+        flex-direction: column !important;
+        justify-content: start !important;
+        align-items: start !important;
+    }
+
+    .qrcode-index1 {
+        display: none !important;
+    }
+
+    .qrcode-index2 {
+        display: flex !important;
+    }
+}
+
+@media (max-width: 990px) {
+    #dropdownInformation {
+        inset: 71px auto auto 12px !important;
+    }
+
+}
+
+/* ====================== end media queries ====================== */
