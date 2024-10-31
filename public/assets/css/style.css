@@ -15,6 +15,10 @@ body {
 
 
 /* ====================== Custom ====================== */
+main
+{
+    margin-bottom: 100px;
+}
 #dropdownInformation {
     inset: 11px auto auto 80px !important;
 }

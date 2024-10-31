@@ -35,3 +35,23 @@ Route::post('/password/verify-otp', [ForgotPasswordController::class, 'verifyOtp
 
 Route::get('/password/reset/{email}', [ForgotPasswordController::class, 'showResetForm'])->name('password.form');
 Route::post('/password/update', [ForgotPasswordController::class, 'updatePassword'])->name('password.update');
+
+
+
+
+
+use App\Http\Controllers\UserSettingsController;
+
+Route::get('/settings/change-password', [UserSettingsController::class, 'showChangePasswordForm'])->name('settings.change-password');
+Route::post('/settings/update-password', [UserSettingsController::class, 'updatePassword'])->name('settings.updatePassword');
+Route::put('settings/update-account', [UserSettingsController::class, 'updateAccount'])->name('settings.updateAccount');
+Route::get('settings/account', [UserSettingsController::class, 'showAccount'])->middleware('auth')->name('settings.account');
+Route::get('/settings/change-image', [UserSettingsController::class, 'showImage'])->name('settings.change-image');
+Route::post('/settings/update-image', [UserSettingsController::class, 'updateImage'])->name('settings.updateImage');
+Route::post('/delete-account', [UserSettingsController::class, 'deleteAccount'])->name('delete.account');
+
+
+
+
+use App\Http\Controllers\CourseController;
+Route::get('/courses', [CourseController::class, 'index'])->name('courses.index');

@@ -26,8 +26,8 @@
     <header>
         <nav class="bg-white shadow-[0px_15px_8.5px_0px_rgba(0,0,0,0.03)]">
             <div class="max-w-[1400px] flex flex-wrap items-center justify-between mx-auto p-4">
-                <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src="assets/images/logo.svg" class="sm:h-10 h-9  " alt="Logo" />
+                <a href="{{ route('home') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="{{ asset('assets/images/logo.svg') }}" class="sm:h-10 h-9  " alt="Logo" />
                 </a>
                 <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                     <button data-collapse-toggle="navbar-cta" type="button"
@@ -66,7 +66,8 @@
                             <!-- Button to toggle dropdown -->
                             <button class="lg:flex hidden" id="dropdownInformationButton2"
                                 data-dropdown-toggle="dropdownInformation">
-                                <img src="assets/images/user.svg" alt="">
+                                <img src="{{ auth()->check() && auth()->user()->image ? asset('storage/profile_images/' . auth()->user()->image) : asset('assets/images/user.svg') }}"
+                                    alt="" class="w-10 h-10 rounded-full">
                             </button>
 
                             <!-- Dropdown Menu -->
@@ -77,18 +78,8 @@
                                 <div
                                     class="flex flex-col lg:flex-row items-center justify-start pr-5 gap-4 w-full py-2">
                                     <!-- User Icon -->
-                                    <svg class="hidden lg:block" width="45" height="45" viewBox="0 0 50 50"
-                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M25 50C38.8071 50 50 38.8071 50 25C50 11.1929 38.8071 0 25 0C11.1929 0 0 11.1929 0 25C0 38.8071 11.1929 50 25 50Z"
-                                            fill="#F5F5F5" />
-                                        <path
-                                            d="M25 49.5C38.531 49.5 49.5 38.531 49.5 25C49.5 11.469 38.531 0.5 25 0.5C11.469 0.5 0.5 11.469 0.5 25C0.5 38.531 11.469 49.5 25 49.5Z"
-                                            stroke="#F5F5F5" />
-                                        <path
-                                            d="M25 26.5396C26.3702 26.5396 27.7097 26.1333 28.849 25.372C29.9883 24.6108 30.8763 23.5288 31.4007 22.2628C31.925 20.9969 32.0622 19.6039 31.7949 18.26C31.5276 16.9161 30.8678 15.6817 29.8989 14.7128C28.93 13.7439 27.6955 13.084 26.3516 12.8167C25.0077 12.5494 23.6147 12.6866 22.3488 13.211C21.0829 13.7353 20.0009 14.6233 19.2396 15.7626C18.4783 16.9019 18.072 18.2414 18.072 19.6116C18.0726 21.4489 18.8026 23.2107 20.1018 24.5098C21.4009 25.809 23.1628 26.5391 25 26.5396ZM31.158 28.0796H28.507C27.4074 28.5867 26.2109 28.8492 25 28.8492C23.7891 28.8492 22.5926 28.5867 21.493 28.0796H18.842C17.209 28.0796 15.6428 28.7282 14.488 29.8829C13.3332 31.0375 12.6843 32.6036 12.684 34.2366V35.0066C12.6843 35.6189 12.9276 36.2061 13.3606 36.639C13.7936 37.072 14.3807 37.3153 14.993 37.3156H35.007C35.6193 37.3153 36.2065 37.072 36.6394 36.639C37.0724 36.2061 37.3158 35.6189 37.316 35.0066V34.2366C37.3147 32.6043 36.6653 31.0392 35.5106 29.8855C34.3559 28.7317 32.7904 28.0836 31.158 28.0836V28.0796Z"
-                                            fill="#6A6565" />
-                                    </svg>
+                                    <img src="{{ auth()->check() && auth()->user()->image ? asset('storage/profile_images/' . auth()->user()->image) : asset('assets/images/user.svg') }}"
+                                        alt="" class="w-10 h-10 rounded-full">
 
                                     <!-- User Name and Email -->
                                     <div class="py-3 text-[17px] text-[#6A6565] text-right">
@@ -104,7 +95,8 @@
                                     aria-labelledby="dropdownInformationButton">
                                     <li><a href="#" class="block px-4 py-3 hover:bg-gray-100 font-[100]">الدورات و
                                             الإشتراكات</a></li>
-                                    <li><a href="#" class="block px-4 py-3 hover:bg-gray-100 font-[100]">تعديل
+                                    <li><a href="{{ route('settings.account') }}"
+                                            class="block px-4 py-3 hover:bg-gray-100 font-[100]">تعديل
                                             الملف الشخصي</a></li>
                                     <li><a href="#" class="block px-4 py-3 hover:bg-gray-100 font-[100]">طرق
                                             الدفع</a></li>
@@ -181,16 +173,26 @@
                         <!-- زر تسجيل الدخول -->
                         <a href="{{ route('login') }}" target="_blank" rel="noopener noreferrer">
                             <li class="sm:hidden block">
-                                <button type="button"
-                                    class="text-white bg-[#e77e5c] focus:outline-none text-[14px] rounded-[15px] px-4 py-3 flex items-center gap-3">
-                                    <svg width="17" height="17" viewBox="0 0 22 21" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M11.0007 11.7933C14.212 11.7933 16.8173 9.18796 16.8173 5.97673C16.8173 2.7655 14.212 0.160156 11.0007 0.160156C7.7895 0.160156 5.18416 2.7655 5.18416 5.97673C5.18416 9.18796 7.7895 11.7933 11.0007 11.7933ZM16.171 13.0859H13.9454C13.0487 13.4979 12.0509 13.7322 11.0007 13.7322C9.95052 13.7322 8.95685 13.4979 8.05609 13.0859H5.83044C2.97467 13.0859 0.660156 15.4004 0.660156 18.2562V18.9025C0.660156 19.9729 1.5286 20.8413 2.59901 20.8413H19.4025C20.4729 20.8413 21.3413 19.9729 21.3413 18.9025V18.2562C21.3413 15.4004 19.0268 13.0859 16.171 13.0859Z"
-                                            fill="white" />
-                                    </svg>
-                                    تسجيل الدخول
-                                </button>
+                                @if (Auth::check())
+                                    <!-- Button to toggle dropdown -->
+                                    <a href="{{ route('settings.account') }}">
+                                        <img src="{{ auth()->check() && auth()->user()->image ? asset('storage/profile_images/' . auth()->user()->image) : asset('assets/images/user.svg') }}"
+                                            alt="" class="w-10 h-10 rounded-full">
+                                    </a>
+                                @else
+                                    <a href="{{ route('login') }}" target="_blank" rel="noopener noreferrer">
+                                        <button type="button"
+                                            class=" text-white bg-[#e77e5c] focus:outline-none text-[14px] rounded-[15px] px-4 py-3 flex items-center gap-3">
+                                            <svg width="20" height="20" viewBox="0 0 22 21" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M11.0007 11.7933C14.212 11.7933 16.8173 9.18796 16.8173 5.97673C16.8173 2.7655 14.212 0.160156 11.0007 0.160156C7.7895 0.160156 5.18416 2.7655 5.18416 5.97673C5.18416 9.18796 7.7895 11.7933 11.0007 11.7933ZM16.171 13.0859H13.9454C13.0487 13.4979 12.0509 13.7322 11.0007 13.7322C9.95052 13.7322 8.95685 13.4979 8.05609 13.0859H5.83044C2.97467 13.0859 0.660156 15.4004 0.660156 18.2562V18.9025C0.660156 19.9729 1.5286 20.8413 2.59901 20.8413H19.4025C20.4729 20.8413 21.3413 19.9729 21.3413 18.9025V18.2562C21.3413 15.4004 19.0268 13.0859 16.171 13.0859Z"
+                                                    fill="white" />
+                                            </svg>
+                                            تسجيل الدخول
+                                        </button>
+                                    </a>
+                                @endif
                             </li>
                         </a>
                     </ul>
@@ -202,19 +204,51 @@
 
 
     <!--====================== START MAIN ======================-->
-    <div id="loader" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+    @if ($errors->any())
+        <div id="alertBox" class="alert error"
+            style="z-index: 999999999; display: none; position: fixed; right: 20px; top: 100px; background-color: #f8d7da; color: #721c24; padding: 20px; border: 1px solid #f5c6cb; border-radius: 5px; display: flex; align-items: center; font-size: 18px; transform: translateX(100%); transition: transform 0.5s ease;">
+            <svg class="w-7 h-7 mr-2 ml-3" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 13h-2v-2h2v2zm0-4h-2V7h2v4z" />
+            </svg>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </div>
+    @endif
+
+    @if (session('success'))
+        <div id="alertBoxSuccess" class="alert success"
+            style="z-index: 999999999; display: none; position: fixed; right: 20px; top: 20px; background-color: #d4edda; color: #155724; padding: 20px; border: 1px solid #c3e6cb; border-radius: 5px; display: flex; align-items: center; font-size: 18px; transform: translateX(100%); transition: transform 0.5s ease;">
+            <svg class="w-6 h-6 mr-2 ml-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                viewBox="0 0 20 20">
+                <path
+                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+            </svg>
+            {{ session('success') }}
+        </div>
+    @endif
+
+
+
+
+
+    <div id="loader"
+        class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-[9999999999999999]">
         <span class="loader"></span>
     </div>
+
+
     @yield('content')
     <!--====================== END MAIN ======================-->
 
 
     <!--====================== FOOTER ======================-->
-    <footer class="bg-[#2F2E2D] mt-20">
+    <footer class="bg-[#2F2E2D]">
         <div class="  max-w-[1400px] mx-auto p-4 md:py-8">
             <div class="sm:flex sm:items-center sm:justify-between">
                 <a href="" class="">
-                    <img src="assets/images/logofooter.svg" alt="Logo" />
+                    <img src="{{ asset('assets/images/logofooter.svg') }}" alt="Logo" />
                 </a>
                 <ul
                     class="sm:my-0 my-16 flex flex-col items-center  text-sm font-medium text-gray-500  sm:flex-row gap-10">
@@ -322,9 +356,37 @@
 
         forms.forEach(form => {
             form.addEventListener('ajaxComplete', function() {
-                loader.style.display = 'none'; 
+                loader.style.display = 'none';
             });
         });
+
+        window.onload = function() {
+            const alertBoxError = document.getElementById("alertBox");
+            if (alertBoxError) {
+                alertBoxError.style.display = "flex";
+                alertBoxError.style.transform = "translateX(0)";
+
+                setTimeout(() => {
+                    alertBoxError.style.transform = "translateX(100%)";
+                    setTimeout(() => {
+                        alertBoxError.style.display = "none";
+                    }, 500);
+                }, 5000);
+            }
+
+            const alertBoxSuccess = document.getElementById("alertBoxSuccess");
+            if (alertBoxSuccess) {
+                alertBoxSuccess.style.display = "flex";
+                alertBoxSuccess.style.transform = "translateX(0)";
+
+                setTimeout(() => {
+                    alertBoxSuccess.style.transform = "translateX(100%)";
+                    setTimeout(() => {
+                        alertBoxSuccess.style.display = "none";
+                    }, 500);
+                }, 5000);
+            }
+        };
     </script>
 </body>
 

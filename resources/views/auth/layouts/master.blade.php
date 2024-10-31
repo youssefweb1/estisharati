@@ -20,7 +20,7 @@
 <body>
     <main>
 
-        <div id="loader" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+        <div id="loader" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-[999999]">
             <span class="loader"></span>
         </div>
 
@@ -74,23 +74,16 @@
                         <div id="successAlert"
                             class="alert alert-success flex items-center p-4 mb-4 text-green-800 bg-green-100 rounded-lg"
                             role="alert">
-                            <svg class="flex-shrink-0 inline w-5 h-5 me-3" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                <path
-                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-                            </svg>
                             <span>{{ session('success') }}</span>
+
+                            <svg class="flex-shrink-0 inline w-5 h-5 me-3" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+                        </svg>
                         </div>
                     @endif
 
-                    <script>
-                        setTimeout(() => {
-                            const alert = document.getElementById('successAlert');
-                            if (alert) {
-                                alert.style.display = 'none';
-                            }
-                        }, 5000);
-                    </script>
 
 
                     @yield('content')
@@ -123,6 +116,12 @@
                 loader.style.display = 'none'; 
             });
         });
+        setTimeout(() => {
+                            const alert = document.getElementById('successAlert');
+                            if (alert) {
+                                alert.style.display = 'none';
+                            }
+                        }, 5000);
     </script>
 
 </body>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <!--====================== MAIN ======================-->
-    <main>
+    <main style="margin: 0 !important" >
         <div class="max-w-[1400px] mx-auto px-5 sm:mt-20 mt-8">
             <!-- 1SEC -->
             <section>
