@@ -41,7 +41,6 @@ Route::post('/password/update', [ForgotPasswordController::class, 'updatePasswor
 
 
 use App\Http\Controllers\UserSettingsController;
-
 Route::get('/settings/change-password', [UserSettingsController::class, 'showChangePasswordForm'])->name('settings.change-password');
 Route::post('/settings/update-password', [UserSettingsController::class, 'updatePassword'])->name('settings.updatePassword');
 Route::put('settings/update-account', [UserSettingsController::class, 'updateAccount'])->name('settings.updateAccount');
@@ -51,7 +50,10 @@ Route::post('/settings/update-image', [UserSettingsController::class, 'updateIma
 Route::post('/delete-account', [UserSettingsController::class, 'deleteAccount'])->name('delete.account');
 
 
-
-
 use App\Http\Controllers\CourseController;
 Route::get('/courses', [CourseController::class, 'index'])->name('courses.index');
+
+
+use App\Http\Controllers\ConsultantsController;
+Route::get('/booking', [ConsultantsController::class, 'index'])->name('courses.index');
+Route::post('/book-consultation', [ConsultantsController::class, 'bookConsultation'])->name('consultation.book');

@@ -350,6 +350,11 @@ stroke: #E77E5C;
     border-bottom: 1px solid #E4E5E7 !important;
     padding-bottom: 40px;
 }
+.vanilla-calendar
+{
+    min-width: 100% !important;
+    min-height: 100% !important;
+}
 
 /* Custom text next to year */
 .custom-text {
